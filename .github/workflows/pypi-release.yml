@@ -1,6 +1,7 @@
 ---
-name: pypi release
+name: Publish to PyPi
 on:
+    workflow_dispatch:
     release:
         types:
             - published
