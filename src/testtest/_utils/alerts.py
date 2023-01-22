@@ -3,6 +3,7 @@ from pathlib import Path
 
 import rich.repr
 import typer
+from icecream import ic
 from loguru import logger
 from rich import print
 
@@ -219,6 +220,7 @@ class LoggerManager:
         Returns:
             bool: True if the current log level is INFO or lower, False otherwise.
         """
+        ic(msg)
         if self.log_level <= 20:
             if msg:
                 print(msg)
