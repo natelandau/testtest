@@ -23,18 +23,6 @@ def version_callback(value: bool) -> None:
 
 @app.command()
 def main(
-    dry_run: bool = typer.Option(
-        False,
-        "--dry-run",
-        "-n",
-        help="Dry run - don't actually change anything",
-    ),
-    force: bool = typer.Option(
-        False,
-        "--force",
-        help="Force changes without prompting for confirmation. Use with caution!",
-        show_default=True,
-    ),
     log_file: Path = typer.Option(
         Path(Path.home() / "logs" / "testtest.log"),
         help="Path to log file",
