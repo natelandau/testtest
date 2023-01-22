@@ -1,3 +1,11 @@
+## v0.1.6 (2023-01-22)
+
+### Fix
+
+- updates to trigger workflows
+- fix workflow
+- fix dev container
+
 ## v0.1.5 (2023-01-22)
 
 ### Fix
