@@ -90,7 +90,7 @@
     "postCreateCommand": "bash ./.devcontainer/post-install.sh",
     "mounts": [
         // Re-use local Git configuration. Don't commit this line
-        // "source=${localEnv:HOME}/.gitconfig.local,target=/home/vscode/.gitconfig.local,type=bind,consistency=cached"
+        "source=${localEnv:HOME}/.gitconfig.local,target=/home/vscode/.gitconfig.local,type=bind,consistency=cached"
     ]
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
