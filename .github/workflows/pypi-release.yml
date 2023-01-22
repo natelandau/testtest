@@ -3,7 +3,7 @@ name: pypi release
 on:
     release:
         types:
-            - created
+            - published
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
