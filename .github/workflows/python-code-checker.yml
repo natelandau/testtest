@@ -80,6 +80,13 @@ jobs:
                   poetry run coverage run
                   poetry run coverage report
                   poetry run coverage xml
+
+            # ----------------------------------------------
+            # Confirm build stability
+            # ----------------------------------------------
+            - name: run poetry build
+              run: poetry build
+
             # # ----------------------------------------------
             # #             upload coverage stats
             # # ----------------------------------------------
