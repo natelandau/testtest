@@ -1,3 +1,9 @@
+## v0.1.4 (2023-01-22)
+
+### Fix
+
+- add pypi release workflow
+
 ## v0.1.3 (2023-01-22)
 
 ### Fix

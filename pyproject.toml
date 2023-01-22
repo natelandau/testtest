@@ -8,7 +8,7 @@
     name        = "testtest"
     readme      = "README.md"
     repository  = "https://github.com/natelandau/testtest"
-    version     = "0.1.3"
+    version     = "0.1.4"
 
     [tool.poetry.scripts] # https://python-poetry.org/docs/pyproject/#scripts
         testtest = "testtest.cli:app"
@@ -138,7 +138,7 @@
     bump_message = "bump(release): v$current_version → v$new_version"
     tag_format = "v$version"
     update_changelog_on_bump = true
-    version = "0.1.3"
+    version = "0.1.4"
     version_files = [
         "pyproject.toml:version",
         "src/testtest/__version__.py:__version__",
