@@ -10,6 +10,9 @@ concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
+permissions:
+    contents: write
+
 jobs:
     autorelease:
         name: Create Release
@@ -23,17 +26,9 @@ jobs:
               with:
                   egress-policy: audit
                   disable-sudo: true
-                  #   allowed-endpoints: >
-                  #       api.snapcraft.io:443
-                  #       api.github.com:443
-                  #       codecov.io:443
-                  #       files.pythonhosted.org:443
-                  #       github.com:443
-                  #       install.python-poetry.org:443
-                  #       pypi.org:443
-                  #       python-poetry.org:443
-                  #       storage.googleapis.com:443
-                  #       uploader.codecov.io:443
+                  allowed-endpoints: >
+                      api.github.com:443
+                      github.com:443
 
             - name: Checkout repository
               uses: actions/checkout@v3
@@ -85,7 +80,7 @@ jobs:
                   body_path: ".github/RELEASE-TEMPLATE.md"
                   draft: true
                   files: |
-                      dist/random_standup-${{env.PROJECT_VERSION}}-py3-none-any.whl
-                      dist/random-standup-${{env.PROJECT_VERSION}}.tar.gz
+                      dist/*-${{env.PROJECT_VERSION}}-py3-none-any.whl
+                      dist/*-${{env.PROJECT_VERSION}}.tar.gz
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
