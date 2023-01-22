@@ -14,6 +14,7 @@ def dryrun(msg: str) -> None:
     Args:
         msg: Message to print
     """
+    ic(msg)
     print(f"[cyan]DRYRUN   | {msg}[/cyan]")
 
 
