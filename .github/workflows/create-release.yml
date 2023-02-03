@@ -59,7 +59,7 @@ jobs:
                   echo $TAG
                   echo $PROJECT_VERSION
                   if [[ "$TAG" != "v$PROJECT_VERSION" ]]; then exit 1; fi
-                  echo "current_tag=$TAG" >> $GITHUB_ENV
+                  echo "current_tag=refs/tags/${TAG}" >> $GITHUB_ENV
             # ----------------------------------------------
             # Generate release notes
             # ----------------------------------------------
