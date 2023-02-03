@@ -1,3 +1,13 @@
+## v0.2.0 (2023-02-03)
+
+### Feat
+
+- use generated changelog for release notes
+
+### Fix
+
+- **deps**: update dependencies
+
 ## v0.1.6 (2023-01-22)
 
 ### Fix

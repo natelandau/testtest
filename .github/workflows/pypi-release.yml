@@ -29,6 +29,17 @@ jobs:
             - name: Setup Python and Poetry
               uses: ./.github/actions/setup-poetry
 
+            # ----------------------------------------------
+            # Test and then build the package
+            # ----------------------------------------------
+            - name: run poetry build
+              run: |
+                  poetry run poetry check
+                  poetry run coverage run
+
+            # ----------------------------------------------
+            # Publish to PyPi
+            # ----------------------------------------------
             - name: Publish
               env:
                   PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
